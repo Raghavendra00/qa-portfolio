@@ -57,3 +57,7 @@ Professional claims come from the supplied resume. Banking client identities rem
 - Production page, asset and resume URL checks.
 
 Live Gemini output requires a valid API key and has not been verified without one.
+
+## QA regression run
+
+See [QA-REPORT.md](QA-REPORT.md) for scope, resolved issues and limits. Run backend checks with: node --test api.test.cjs.
