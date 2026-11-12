@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Analytics · Admin</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+
+<div id="login" class="login" hidden>
+  <form id="login-form" class="login-card">
+    <h1>Analytics</h1>
+    <p>Enter the admin password to view visitor insights.</p>
+    <label for="pw">Password</label>
+    <input id="pw" type="password" autocomplete="current-password" required>
+    <button type="submit">Sign in</button>
+    <p id="login-error" class="error" role="alert" hidden></p>
+  </form>
+</div>
+
+<main id="dash" class="dash" hidden>
+  <header class="dash-head">
+    <div>
+      <h1>Visitor analytics</h1>
+      <p id="meta" class="muted"></p>
+    </div>
+    <div class="head-actions">
+      <button id="refresh" type="button">Refresh</button>
+      <button id="logout" type="button" class="ghost">Sign out</button>
+    </div>
+  </header>
+
+  <section class="tiles" id="tiles" aria-label="Summary"></section>
+
+  <div class="grid">
+    <section class="panel"><h2>Top pages</h2><div id="pages"></div></section>
+    <section class="panel"><h2>Countries</h2><div id="countries"></div></section>
+    <section class="panel"><h2>Cities</h2><div id="cities"></div></section>
+    <section class="panel"><h2>Referrers</h2><div id="referrers"></div></section>
+    <section class="panel"><h2>Devices</h2><div id="devices"></div></section>
+    <section class="panel"><h2>Browsers</h2><div id="browsers"></div></section>
+  </div>
+
+  <section class="panel wide">
+    <h2>Recent visits</h2>
+    <div class="table-wrap">
+      <table id="sessions">
+        <thead><tr>
+          <th>When</th><th>Location</th><th>Device</th><th>Browser</th>
+          <th>Source</th><th>Pages</th><th class="num">Time</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="/admin.js"></script>
+</body>
+</html>
